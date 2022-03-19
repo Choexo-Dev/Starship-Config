@@ -1,0 +1,130 @@
+# Prompt: param 2 └─
+[character]
+success_symbol = " [╰─λ](bold green)"
+error_symbol = " [➜✗](bold red)"
+
+# Username
+[username]
+style_user = "bold dimmed blue"
+
+# Second param
+[hostname]
+ssh_only = false
+format = "<[$hostname]($style)>"
+trim_at = "-"
+style = "bold dimmed white"
+disabled = true
+
+# SYMBOLS
+[status]
+symbol = "🔴"
+format = '[\[$symbol$status_common_meaning$status_signal_name$status_maybe_int\]]($style)'
+map_symbol = true
+disabled = false
+
+# [battery]
+# full_symbol = "🔋"
+# charging_symbol = "🔌"
+# discharging_symbol = "⚡"
+
+## SECOND LINE/ROW: Prompt
+# Somethere at the beginning
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+disabled = true
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+# [cmd_duration]
+# min_time = 10_000  # Show command duration over 10,000 milliseconds (=10 sec)
+# format = " took [$duration]($style)"
+
+# Last param in the first line/row
+[cmd_duration]
+min_time = 1
+format = "took [$duration]($style)"
+disabled = false
+
+# [directory]
+# truncation_length = 5
+# format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+# Third param
+[directory]
+style = "purple"
+truncation_length = 0
+truncate_to_repo = true
+truncation_symbol = "repo: "
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+symbol = "♏ "
+style = "bold yellow"
+
+[git_commit]
+commit_hash_length = 8
+style = "bold white"
+tag_symbol = "🔖 "
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_metrics]
+added_style = "bold blue"
+format = '[+$added]($added_style)/[-$deleted]($deleted_style) '
+
+[git_status]
+conflicted = "⚔️ "
+ahead = " 🏎️ 💨 ×${count}"
+behind = "🐢 ×${count}"
+diverged = " 🪶  🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
+untracked = "🤷 ×${count}"
+stashed = "📦 "
+modified = "📝 ×${count}"
+staged = "🗃️  ×${count}"
+renamed = "📛 ×${count}"
+deleted = "🗑️  ×${count}"
+style = "bright-white"
+format = "$all_status$ahead_behind"
+
+
+
+[julia]
+format = "[$symbol$version]($style) "
+symbol = "ஃ "
+style = "bold green"
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = false
+
+[package]
+disabled = true
+
+[python]
+format = "[$symbol$version]($style) "
+style = "bold green"
+
+[rust]
+format = "[$symbol$version]($style) "
+style = "bold green"
+
+# [time]
+# time_format = "%T"
+# format = "🕙 $time($style) "
+# style = "bright-white"
+# disabled = false
+
+# Prompt: optional param 1
+[time]
+format = " 🕙 $time($style)\n"
+time_format = "%T"
+style = "bright-white"
+disabled = true

@@ -1,0 +1,29 @@
+# Don't print a new line at the start of the prompt
+add_newline = false
+
+#directory module
+[directory]
+#prefixStyle = "#ffffdd"
+#pathStyle = "#5555dd"
+format="[╭╴](#D7E8BA) [$path](#FFCF3C) [$read_only]($read_only_style)"
+
+# Replace the "❯" symbol in the prompt with "λ"
+[character]                            # The name of the module we are configuring is "character"
+success_symbol = "[╰╴](#D7E8BA)[λ](#4DA1A9)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
+error_symbol = "[╰╴](#D7E8BA)[Δ](#2E5077)"
+# "[╰╴](yellow)"
+
+[memory_usage]
+disabled = false
+symbol = "🧠"
+style = "#084C61"
+
+[git_branch]
+style = "#5F8DD3"
+
+[python]
+python_binary = "python3"
+
+[git_status]
+style = "#87DEAA"
+#Disable the package module, hiding it from the prompt completely
