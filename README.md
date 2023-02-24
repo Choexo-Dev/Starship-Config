@@ -1,2 +1,2 @@
 # Starship-Config
-a place to save my starship.toml config
+A place to save my starship.toml config
